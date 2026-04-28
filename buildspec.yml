@@ -16,6 +16,4 @@ phases:
   post_build:
     commands:
       - echo Deploying to S3...
-      - echo "BUCKET_NAME is: $BUCKET_NAME"
-      - ls -l build
-      - aws s3 sync build/ s3://$BUCKET_NAME --delete --acl public-read
+      - aws s3 sync build/ s3://$BUCKET_NAME
