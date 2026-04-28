@@ -1,4 +1,4 @@
-version: 0.2
+version: 02
 
 phases:
   install:
@@ -16,4 +16,4 @@ phases:
   post_build:
     commands:
       - echo Deploying to S3...
-      - aws s3 sync dist/ s3://$BUCKET_NAME --delete --acl public-read
+      - aws s3 sync build/ s3://$BUCKET_NAME --delete --acl public-read
