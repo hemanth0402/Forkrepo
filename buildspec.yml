@@ -1,18 +1,18 @@
 version: 0.2
- 
+
 phases:
   install:
     runtime-versions:
-      nodejs: 18
+      nodejs: 14
     commands:
       - echo Installing dependencies...
-      - npm install
- 
+      - npm install --legacy-peer-deps
+
   build:
     commands:
       - echo Building project...
       - npm run build
- 
+
   post_build:
     commands:
       - echo Deploying to S3...
